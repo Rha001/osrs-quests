@@ -3,6 +3,9 @@ import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import PlayerBar from './components/playerBar/PlayerBar';
 
+// TODO: Create a component to show quest lists and share the possible ones as a prop, also integrate the algorythm
+// in this component and check performance, backend will be gone for now.
+
 class App extends Component {
   render() {
     return (

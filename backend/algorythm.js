@@ -38,19 +38,3 @@ hiscores.getPlayer(playerInfo).then((playerStats) => {
     console.log('Cannot: ', notPossibleQuests);
     process.exit(0);
 }).catch(console.error);
-
-/*
-getPlayerInfo(playerInfo).then((playerStats) => {
-    console.log(`Stats for ${playerInfo.name}   ->    `, playerStats);
-});
-
-async function getPlayerInfo(playerInfo) {
-    try {
-        const output = await hiscores.getPlayer(playerInfo);
-        
-        return output;
-    } catch(err) {
-        throw err
-    }
-}
-*/
