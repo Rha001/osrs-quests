@@ -5,3 +5,7 @@
 .player-bar *{
   margin: 0px 15px;
 }
+
+.list-group {
+  margin: 40px 0;
+}

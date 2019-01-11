@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-// import axios from 'axios';
 
 class PlayerBar extends Component {
     constructor(props) {
@@ -23,7 +22,7 @@ class PlayerBar extends Component {
         this.setState({ [itemName]: itemValue });
     }
 
-    render() {// for(let playerType of this.props.playerTypes) {
+    render() {
         let playerTypes = Object.keys(this.props.playerTypes).map((item) => {
             return (
                 <option value={item} key={item}>{item}</option>

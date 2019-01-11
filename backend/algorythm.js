@@ -5,7 +5,7 @@ let questList = JSON.parse(fs.readFileSync('quests.json','utf8'));
 let possibleQuests = [], notPossibleQuests = [];
 
 let playerInfo = {
-    name: "tilaa",
+    name: "solo rha",
     type: constants.playerTypes.normal
 };
 
