@@ -1,13 +1,64 @@
 import React, { Component } from 'react';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
+// components
 import PlayerBar from './components/playerBar/PlayerBar';
+// libraries
+import { constants, hiscores } from 'osrs-api';
+// assets
+import questList from './assets/quests.json';
 
 // TODO: Create a component to show quest lists and share the possible ones as a prop, also integrate the algorythm
 // in this component and check performance, backend will be gone for now.
 
 class App extends Component {
-  render() {
+  playerHasRequirements = (requirements, playerStats) => {
+    for(const req in requirements) {
+      if(requirements[req] > parseInt(playerStats[req].level)) {
+          return false;
+      }
+    }
+
+    return true;
+  }
+
+  getPlayerInfo = (playerName, playerType) => {
+    let possibleQuests = [], notPossibleQuests = [];
+
+    hiscores.getPlayer({
+      name: playerName,
+      type: playerType
+    }).then((playerStats) => {
+      for(const quest in questList) {
+          const questReqs = questList[quest].requirements || false;
+  
+          if(!questReqs) {
+              possibleQuests.push(quest);
+          } else {
+              if(this.playerHasRequirements(questReqs, playerStats)) {
+                  possibleQuests.push(quest);
+              } else {
+                  notPossibleQuests.push(quest);
+              }
+          }
+      }
+  
+      console.log('Can: ', possibleQuests);
+      console.log('Cannot: ', notPossibleQuests);
+    }).catch((e) => {
+      if(e.response) {
+        if(e.response.status === 404)
+          console.log('Player Not found.');
+        else 
+          console.log('Service Error.');
+        
+      } else {
+        console.log('Unexpected error.');
+      }
+    });
+  }
+
+  render = () => {
     return (
       <div>
         <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
@@ -30,7 +81,7 @@ class App extends Component {
         </nav>
         <div className="container">
           <h3>Osrs Quest Calculator</h3>
-          <PlayerBar/>
+          <PlayerBar playerTypes={constants.playerTypes}  calculateQuests={this.getPlayerInfo}/>
         </div>
       </div>
     );

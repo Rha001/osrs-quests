@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
-import axios from 'axios';
+// import axios from 'axios';
 
 class PlayerBar extends Component {
-    constructor() {
-        super();
-
+    constructor(props) {
+        super(props);
+        
         this.state = {
             playerType: 'normal',
             playerName: ''
@@ -12,7 +12,8 @@ class PlayerBar extends Component {
     }
 
     getQuestsInfo = (e) => {
-        console.log('Request for: ' + this.state.playerName + ', type: ' + this.state.playerType);
+        if(this.state.playerName.length > 0)
+            this.props.calculateQuests(this.state.playerName, this.state.playerType);
     }
 
     handleChange = (e) => {
@@ -22,12 +23,17 @@ class PlayerBar extends Component {
         this.setState({ [itemName]: itemValue });
     }
 
-    render() {
+    render() {// for(let playerType of this.props.playerTypes) {
+        let playerTypes = Object.keys(this.props.playerTypes).map((item) => {
+            return (
+                <option value={item} key={item}>{item}</option>
+            );
+        });
+
         return(
             <div className="player-bar">
-                <select name="playerType" id="playerType" value={this.state.type} onChange={this.handleChange}>
-                    <option value="normal">Normal</option>
-                    <option value="ironman">Ironman</option>
+                <select name="playerType" id="playerType" value={this.state.playerType} onChange={this.handleChange}>
+                    {playerTypes}
                 </select>
                 <input type="text" name="playerName" id="playerName" value={this.state.playerName} onChange={this.handleChange}/>
                 <button onClick={this.getQuestsInfo}>Get</button>
