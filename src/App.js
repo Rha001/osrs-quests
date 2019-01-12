@@ -7,10 +7,11 @@ import PlayerBar from './components/playerBar/PlayerBar';
 import QuestList from './components/questList/QuestList';
 
 // libraries
-import { constants, hiscores } from 'osrs-api';
+import { hiscores } from 'osrs-api';
 
 // assets
 import questList from './assets/quests.json';
+import constants from './assets/constants';
 
 // TODO: Create a component to show quest lists and share the possible ones as a prop, also integrate the algorythm
 // in this component and check performance, backend will be gone for now.
@@ -21,7 +22,8 @@ class App extends Component {
     
     this.state = {
       possibleQuests: [],
-      showQuests: false
+      showQuests: false,
+      errors: ''
     };
   }
 
@@ -40,32 +42,34 @@ class App extends Component {
 
     hiscores.getPlayer({
       name: playerName,
-      type: playerType
+      type: 'normal'
     }).then((playerStats) => {
       for(const quest in questList) {
           const questReqs = questList[quest].requirements || false;
   
           if(!questReqs) {
               possibleQuests.push(quest);
+              questList[quest].hasReqs = true;
           } else {
               if(this.playerHasRequirements(questReqs, playerStats)) {
                   possibleQuests.push(quest);
+                  questList[quest].hasReqs = true;
               } else {
                   notPossibleQuests.push(quest);
               }
           }
       }
-  
-      this.setState({possibleQuests: possibleQuests, showQuests: true});
+
+      this.setState({possibleQuests: possibleQuests, showQuests: true, errors: ''});
     }).catch((e) => {
       if(e.response) {
-        if(e.response.status === 404)
-          console.log('Player Not found.');
-        else 
-          console.log('Service Error.');
-        
+        if(e.response.status === 404) {
+          this.setState({errors: 'Player Not found.'});
+        } else {
+          this.setState({errors: 'Service Error.'});
+        }
       } else {
-        console.log('Unexpected error.');
+        this.setState({errors: 'Unexpected error.'});
       }
     });
   }
@@ -82,10 +86,10 @@ class App extends Component {
               <li className="nav-item active">
                 <a className="nav-link" href="#">Quests</a>
               </li>
-              <li className="nav-item">
+              <li className="nav-item disabled">
                 <a className="nav-link" href="#">Diaries</a>
               </li>
-              <li className="nav-item">
+              <li className="nav-item disabled">
                 <a className="nav-link" href="#">About</a>
               </li>
             </ul>
@@ -94,7 +98,10 @@ class App extends Component {
         <div className="container">
           <h3>Osrs Quest Calculator</h3>
           <PlayerBar playerTypes={constants.playerTypes}  calculateQuests={this.getPlayerInfo}/>
-          {this.state.showQuests && 
+          { this.state.errors.length > 0 &&
+            <div className="alert alert-danger custom-margin" role="alert">{this.state.errors}</div>
+          }
+          { this.state.showQuests && 
             <QuestList questList={questList} possibleQuests={this.state.possibleQuests}/>
           }
         </div>

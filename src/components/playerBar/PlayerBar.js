@@ -22,7 +22,13 @@ class PlayerBar extends Component {
         this.setState({ [itemName]: itemValue });
     }
 
-    render() {
+    handleKeyDown = (e) => {
+        if(e.charCode === 13 || e.keyCode === 13) {
+            this.props.calculateQuests(this.state.playerName, this.state.playerType);
+        }
+    }
+
+    render = () => {
         let playerTypes = Object.keys(this.props.playerTypes).map((item) => {
             return (
                 <option value={item} key={item}>{item}</option>
@@ -34,7 +40,7 @@ class PlayerBar extends Component {
                 <select name="playerType" id="playerType" value={this.state.playerType} onChange={this.handleChange}>
                     {playerTypes}
                 </select>
-                <input type="text" name="playerName" id="playerName" value={this.state.playerName} onChange={this.handleChange}/>
+                <input type="text" name="playerName" id="playerName" value={this.state.playerName} onChange={this.handleChange} onKeyDown={this.handleKeyDown}/>
                 <button onClick={this.getQuestsInfo}>Get</button>
             </div>
         );

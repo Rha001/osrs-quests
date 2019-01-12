@@ -1,21 +1,26 @@
 {
-    "Black Knights' Fortress" : {
+    "Black Knights' Fortress": {
+        "hasReqs":false,
         "length": "short",
         "qp":12,
         "notes": "The ability to evade level 33 Black Knights."
     },
     "Cook's Assistant": {
+        "hasReqs":false,
         "length": "short"
     },
     "The Corsair Curse": {
+        "hasReqs":false,
         "length": "short",
         "notes": "Level 35 enemy."
     },
     "Demon Slayer": {
+        "hasReqs":false,
         "length": "medium",
         "notes": "Level 27 demon must be defeated with a sword, 25 normal bones unoted needed."
     },
     "Doric's Quest": {
+        "hasReqs":false,
         "length": "short",
         "ironman": {
             "mining":15
@@ -23,6 +28,7 @@
         "notes": "15 mining needed if mining your own iron ore."
     },
     "Dragon Slayer": {
+        "hasReqs":false,
         "length": "Long",
         "qp":32,
         "ironman": {
@@ -31,17 +37,21 @@
         "notes": "You must defeat a level 83 dragon, 33 magic or 10k needed."
     },
     "Ernest the Chicken": {
+        "hasReqs":false,
         "length": "short",
         "notes": "Lvl 22 skeleton may attack you."
     },
     "Goblin Diplomacy": {
+        "hasReqs":false,
         "length": "short"
     },
     "Imp Catcher": {
+        "hasReqs":false,
         "length": "Short",
         "notes": "Black bead, Yellow bead, Red bead and White bead needed."
     },
     "The Knight's Sword": {
+        "hasReqs":false,
         "length": "intermediate",
         "requirements": {
             "mining":10
@@ -52,41 +62,52 @@
         "notes": "Level 57 and 53 monsters may attack you."
     },
     "Misthalin Mystery": {
+        "hasReqs":false,
         "length": "medium"
     },
     "Pirate's Treasure": {
+        "hasReqs":false,
         "length": "short"
     },
     "Prince Ali Rescue": {
+        "hasReqs":false,
         "length": "short",
         "notes": "Level 26 jail guards may attack you."
     },
     "The Restless Ghost": {
+        "hasReqs":false,
         "length": "short",
         "notes": "Level 13 monster will attack you."
     },
     "Romeo & Juliet": {
+        "hasReqs":false,
         "length": "short"
     },
     "Rune Mysteries": {
+        "hasReqs":false,
         "length": "short"
     },
     "Sheep Shearer": {
+        "hasReqs":false,
         "length": "short",
         "notes": "20 ball of wool needed, or shears to get them."
     },
     "Shield of Arrav": {
+        "hasReqs":false,
         "length": "medium",
         "notes": "You will need another player to complete this quest, there's a cc called 'osrs soa' in which you can look for a parthner."
     },
     "Vampire Slayer": {
+        "hasReqs":false,
         "length": "short",
         "notes": "Must be able to defeat a lvl 34 vampire who can regenerate health."
     },
     "Witch's Potion": {
+        "hasReqs":false,
         "length": "short"
     },
     "Animal Magnetism": {
+        "hasReqs":false,
         "length": "medium - long",
         "requirements": {
             "slayer":18,
@@ -105,6 +126,7 @@
         "notes": "20 Ecto-tokens required, Mithril axe required(ironman)."
     },
     "Another Slice of H.A.M.": {
+        "hasReqs":false,
         "length": "medium",
         "requirements": {
             "attack":15,
@@ -122,6 +144,7 @@
         "notes": "Level 64 boss fight."
     },
     "Between a Rock...": {
+        "hasReqs":false,
         "length": "Long",
         "requirements": {
             "defence":30,
@@ -135,6 +158,7 @@
         "notes": "Level 75-125 enemies."
     },
     "Big Chompy Bird Hunting": {
+        "hasReqs":false,
         "length": "short",
         "requirements": {
             "fletching":5,
@@ -144,6 +168,7 @@
         "notes": "You may have to kill some level 64 wolves."
     },
     "Biohazard": {
+        "hasReqs":false,
         "length": "medium",
         "quests":[
             "Plague City"
@@ -151,6 +176,7 @@
         "notes": "Level 13 mourner to defeat."
     },
     "Bone Voyage": {
+        "hasReqs":false,
         "length": "short-medium",
         "quests":[
             "The Dig Site",
@@ -159,6 +185,7 @@
         "notes": "You must have at least 100 kudos."
     },
     "Cabin Fever": {
+        "hasReqs":false,
         "length": "medium",
         "requirements": {
             "agility":42,
@@ -178,13 +205,16 @@
         "notes": "No boost allowed, lvl 57 pirates will attack you."
     },
     "Client of Kourend": {
+        "hasReqs":false,
         "length": "medium"
     },
     "Clock Tower": {
+        "hasReqs":false,
         "length": "short",
         "notes": "Level 53 ogres may attack you."
     },
     "Cold War": {
+        "hasReqs":false,
         "length": "medium-long",
         "requirements": {
             "hunter":10,
@@ -195,6 +225,7 @@
         "notes": "1-3 icelords lvl 51 to defeat, crafting table 3 needed(ironman)."
     },
     "Contact!": {
+        "hasReqs":false,
         "length": "Medium",
         "quests":[
             "Prince Ali Rescue",
@@ -204,6 +235,7 @@
         "notes": "Level 191 Giant scarab to defeat."
     },
     "Creature of Fenkenstrain": {
+        "hasReqs":false,
         "length": "medium",
         "requirements": {
             "crafting":20,
@@ -216,6 +248,7 @@
         "notes": "You should be able to defeat a lvl 51 monster and tank some lvl 72."
     },
     "Darkness of Hallowvale": {
+        "hasReqs":false,
         "length": "Very long",
         "requirements": {
             "construction":5,
@@ -236,9 +269,11 @@
         "notes": "Level 169 boss to fight."
     },
     "Death Plateau": {
+        "hasReqs":false,
         "length": "Medium"
     },
     "Death to the Dorgeshuun": {
+        "hasReqs":false,
         "length": "medium",
         "requirements": {
             "agility":23,
@@ -252,6 +287,7 @@
         "notes": "Level 50 enemy to defeat with mele or magic, 2 sets of H.A.M robes needed(7 pieces each)."
     },
     "The Depths of Despair": {
+        "hasReqs":false,
         "length": "short",
         "requirements": {
             "agility":18
@@ -262,6 +298,7 @@
         "notes": "20% Hosidius house favour needed."
     },
     "Desert Treasure": {
+        "hasReqs":false,
         "length": "Long",
         "requirements": {
             "thieving":53,
@@ -282,6 +319,7 @@
         "notes": "Thieving and Magic cannot be boosted, 10 slayer not required if you have a gas mask from Plague City, several high level enemies to defeat, 12 magic logs needed(ironman)."
     },
     "Devious Minds": {
+        "hasReqs":false,
         "length": "short",
         "requirements": {
             "smithing":65,
@@ -306,6 +344,7 @@
         ]
     },
     "The Dig Site": {
+        "hasReqs":false,
         "length": "long",
         "requirements": {
             "agility":10,
@@ -317,6 +356,7 @@
         ]
     },
     "Dragon Slayer II": {
+        "hasReqs":false,
         "length": "very long",
         "qp":200,
         "requirements": {
@@ -369,6 +409,7 @@
         "notes": "No boosts allowed, must have firemaking barbarian training started to have access to the Ancient Cavern, several high level enemies to defeat including a level 608."
     },
     "Dream Mentor": {
+        "hasReqs":false,
         "length": "short-medium",
         "quests":[
             "Lunar Diplomacy",
@@ -386,12 +427,15 @@
         "notes": "85 Combat needed."
     },
     "Druidic Ritual": {
+        "hasReqs":false,
         "length": "short"
     },
     "Dwarf Cannon": {
+        "hasReqs":false,
         "length": "short"
     },
     "Eadgar's Ruse": {
+        "hasReqs":false,
         "length": "medium-long",
         "requirements": {
             "herblore":31
@@ -404,12 +448,14 @@
         "notes": "44 agility recommended."
     },
     "Eagles' Peak": {
+        "hasReqs":false,
         "length": "medium",
         "requirements": {
             "hunter":27
         }
     },
     "Elemental Workshop I": {
+        "hasReqs":false,
         "length": "short",
         "requirements": {
             "mining":20,
@@ -419,6 +465,7 @@
         "notes": "level 35 enemy to defeat."
     },
     "Elemental Workshop II": {
+        "hasReqs":false,
         "length": "medium",
         "requirements": {
             "magic":20,
@@ -429,6 +476,7 @@
         ]
     },
     "Enakhra's Lament": {
+        "hasReqs":false,
         "length": "medium",
         "requirements": {
             "crafting":50,
@@ -439,6 +487,7 @@
         }
     },
     "Enlightened Journey": {
+        "hasReqs":false,
         "length": "short(long if growing the tree)",
         "qp":20,
         "requirements": {
@@ -448,6 +497,7 @@
         }
     },
     "The Eyes of Glouphrie": {
+        "hasReqs":false,
         "length": "medium-long",
         "requirements": {
             "construction":5,
@@ -464,6 +514,7 @@
         "notes": "The ironman requirements are there because a maple log is needed, an alternativeis to get it through miscelanea, the 13 runecrafting is to get a mud rune."
     },
     "Fairytale I - Growing Pains": {
+        "hasReqs":false,
         "length": "Long",
         "quests":[
             "Lost City",
@@ -474,6 +525,7 @@
         "notes": "You must be able to defeat a level 111 enemy with limited weaponry."
     },
     "Fairytale II - Cure a Queen": {
+        "hasReqs":false,
         "length": "short-medium",
         "requirements": {
             "thieving":40,
@@ -490,6 +542,7 @@
         "notes": "Must be able to kill a level 145 gorak in multi area, you can unlock the rings without completing the quest."
     },
     "Family Crest": {
+        "hasReqs":false,
         "length": "medium",
         "requirements": {
             "mining":40,
@@ -500,6 +553,7 @@
         "notes": "you will have to kill a level 170 demon, it can be safespotable, part of this quest is done in the wilderness."
     },
     "The Feud": {
+        "hasReqs":false,
         "length": "medium",
         "requirements": {
             "thieving":30
@@ -507,10 +561,12 @@
         "notes": "Thieving is not boostable, there are two enemies to defeat levels 70 and 75."
     },
     "Fight Arena": {
+        "hasReqs":false,
         "length": "short",
         "notes": "You will have to kill level 44, 63, and 137 enemies, all can be safespoted."
     },
     "Fishing Contest": {
+        "hasReqs":false,
         "length": "short",
         "requirements": {
             "fishing":10
@@ -518,6 +574,7 @@
         "notes": "Fishing cannot be boosted."
     },
     "Forgettable Tale...": {
+        "hasReqs":false,
         "length": "long",
         "requirements": {
             "cooking":22,
@@ -529,6 +586,7 @@
         ]
     },
     "The Fremennik Isles": {
+        "hasReqs":false,
         "length": "long",
         "requirements": {
             "construction":20,
@@ -541,6 +599,7 @@
         "notes": "Several trolls to fight, some in multi combat."
     },
     "The Fremennik Trials": {
+        "hasReqs":false,
         "length": "long",
         "requirements": {
             "fletching":25,
@@ -550,6 +609,7 @@
         "notes": "Requirements are optional to craft a lire, you can kill an NPC to get it without the requirements."
     },
     "Garden of Tranquillity": {
+        "hasReqs":false,
         "length": "very long(you have to wait for some trees to grow)",
         "requirements": {
             "farming":25
@@ -561,9 +621,11 @@
         ]
     },
     "Gertrude's Cat": {
+        "hasReqs":false,
         "length": "short"
     },
     "Ghosts Ahoy": {
+        "hasReqs":false,
         "length": "medium-long",
         "requirements": {
             "agility":25,
@@ -575,6 +637,7 @@
         ]
     },
     "The Giant Dwarf": {
+        "hasReqs":false,
         "length": "medium-long",
         "requirements": {
             "crafting":12,
@@ -587,6 +650,7 @@
         ]
     },
     "The Golem": {
+        "hasReqs":false,
         "length": "medium",
         "requirements": {
             "crafting":20,
@@ -594,6 +658,7 @@
         }
     },
     "The Grand Tree": {
+        "hasReqs":false,
         "length": "long",
         "requirements": {
             "agility":25
@@ -601,6 +666,7 @@
         "notes": "you must be able to defeat a level 172 demon, can be safespoted."
     },
     "The Great Brain Robbery": {
+        "hasReqs":false,
         "length": "medium",
         "requirements": {
             "crafting":16,
@@ -621,6 +687,7 @@
         "notes": "Pirate Pete subquest from Recipe for Disaster is needed."
     },
     "Grim Tales": {
+        "hasReqs":false,
         "length": "medium",
         "requirements": {
             "farming":45,
@@ -631,6 +698,7 @@
         }
     },
     "The Hand in the Sand": {
+        "hasReqs":false,
         "length": "medium",
         "requirements": {
             "thieving":17,
@@ -638,6 +706,7 @@
         }
     },
     "Haunted Mine": {
+        "hasReqs":false,
         "length": "short",
         "requirements": {
             "agility":15,
@@ -648,9 +717,11 @@
         ]
     },
     "Hazeel Cult": {
+        "hasReqs":false,
         "length": "short"
     },
     "Heroes' Quest": {
+        "hasReqs":false,
         "length": "medium-long",
         "qp":55,
         "requirements": {
@@ -669,6 +740,7 @@
         "notes": "Aparthner is needed to complete this quests, is the same as Shield of Arrav, there's a cc called 'osrs soa' in which you can look for a parthner."
     },
     "Holy Grail": {
+        "hasReqs":false,
         "length": "medium-long",
         "requirements": {
             "attack":20
@@ -679,6 +751,7 @@
         "notes": "Must be able to defeat a level 120 enemy, can be safespoted."
     },
     "Horror from the Deep": {
+        "hasReqs":false,
         "length": "short",
         "requirements": {
             "agility":35
@@ -689,6 +762,7 @@
         "notes": "Must be able to kill a lvl 100 enemy with different styles."
     },
     "Icthlarin's Little Helper": {
+        "hasReqs":false,
         "length": "medium-long",
         "quests":[
             "Gertrude's Cat"
@@ -696,6 +770,7 @@
         "notes": "Several enemies to fight, the strongest of level 91."
     },
     "In Aid of the Myreque": {
+        "hasReqs":false,
         "length": "long",
         "requirements": {
             "crafting":25,
@@ -711,6 +786,7 @@
         "notes": "Several enemies to fight up to level 75."
     },
     "In Search of the Myreque": {
+        "hasReqs":false,
         "length": "short",
         "requirements": {
             "agility":25
@@ -723,6 +799,7 @@
         "notes": "Must be able to kill a level 97 enemy, can be safespotable"
     },
     "Jungle Potion": {
+        "hasReqs":false,
         "length": "short-medium",
         "quests":[
             "Druidic Ritual"
@@ -730,6 +807,7 @@
         "notes": "Level 53 Jogres and level 46 Harpier Bug may attack you."
     },
     "King's Ransom": {
+        "hasReqs":false,
         "length": "medium",
         "requirements": {
             "magic":45,
@@ -749,6 +827,7 @@
         "notes": "Defence cannot be boosted, you can get Piety and Chivalry after this quest."
     },
     "Legends' Quest": {
+        "hasReqs":false,
         "length": "very long",
         "qp":107,
         "requirements": {
@@ -781,6 +860,7 @@
         "notes": "Must be able to defeat a level 187 demon 3 times."
     },
     "Lost City": {
+        "hasReqs":false,
         "length": "short",
         "requirements": {
             "crafting":31,
@@ -789,6 +869,7 @@
         "notes": "Must be able to kill a level 101 enemy with limited armour and weapons."
     },
     "The Lost Tribe": {
+        "hasReqs":false,
         "length": "medium",
         "requirements": {
             "agility":13,
@@ -801,6 +882,7 @@
         ]
     },
     "Lunar Diplomacy": {
+        "hasReqs":false,
         "length": "long",
         "requirements": {
             "crafting":61,
@@ -822,6 +904,7 @@
         "notes": "Boosts cannot be used, Must be able to kill multiple level 111 enemies."
     },
     "Making Friends with My Arm": {
+        "hasReqs":false,
         "length": "medium",
         "requirements": {
             "firemaking":66,
@@ -852,6 +935,7 @@
         "notes": "Cannot boost firemaking, two bosses, one level 163 and one level 198."
     },
     "Making History": {
+        "hasReqs":false,
         "length": "short-long(depending on teleports available)",
         "quests":[
             "Priest in Peril",
@@ -859,13 +943,16 @@
         ]
     },
     "Merlin's Crystal": {
+        "hasReqs":false,
         "length": "short-medium(depending on teleports available)",
         "notes": "Level 39 enemy"
     },
     "Monk's Friend": {
+        "hasReqs":false,
         "length": "very short"
     },
     "Monkey Madness I": {
+        "hasReqs":false,
         "length": "Long",
         "quests":[
             "The Grand Tree",
@@ -874,6 +961,7 @@
         "notes": "Must be able to defeat a level 196 jungle demon, 43 prayer recommended"
     },
     "Monkey Madness II": {
+        "hasReqs":false,
         "length": "very long",
         "requirements": {
             "slayer":69,
@@ -898,6 +986,7 @@
         "notes": "You can only boost firemaking, Grand tree destination must be unlocked for balloon transport system, several bosses to fight up to level 378."
     },
     "Mountain Daughter": {
+        "hasReqs":false,
         "length": "medium",
         "requirements": {
             "agility":20
@@ -905,6 +994,7 @@
         "notes": "must be able to defeat a lvl 70 enemy."
     },
     "Mourning's Ends Part I": {
+        "hasReqs":false,
         "length": "long to very long",
         "requirements": {
             "ranged":60,
@@ -918,6 +1008,7 @@
         "notes": "Ranged not boostable."
     },
     "Mourning's Ends Part II": {
+        "hasReqs":false,
         "length": "very long",
         "quests":[
             "Mourning's Ends Part I"
@@ -925,9 +1016,11 @@
         "notes": "43 Prayer recommended, 60+ agility recommended"
     },
     "Murder Mystery": {
+        "hasReqs":false,
         "length": "short"
     },
     "My Arm's Big Adventure": {
+        "hasReqs":false,
         "length": "medium",
         "requirements": {
             "woodcutting":10,
@@ -945,6 +1038,7 @@
         "notes": "Must have at least 60% favour in the Tai Bwo Wannai Cleanup minigame, must be able to defeat a level 172 Giant Roc."
     },
     "Nature Spirit": {
+        "hasReqs":false,
         "length": "medium",
         "requirements": {
             "crafting":18
@@ -955,6 +1049,7 @@
         ]
     },
     "Observatory Quest": {
+        "hasReqs":false,
         "length": "short-medium",
         "requirements": {
             "crafting":10
@@ -962,6 +1057,7 @@
         "notes": "May have to defeat a lvl 42 enemy."
     },
     "Olaf's Quest": {
+        "hasReqs":false,
         "length": "short-long(depending on agility)",
         "requirements": {
             "firemaking":40,
@@ -973,6 +1069,7 @@
         "notes": "Must be able to defeat a level 100 enemy"
     },
     "One Small Favour": {
+        "hasReqs":false,
         "length": "Very long",
         "requirements": {
             "agility":36,
@@ -988,13 +1085,16 @@
         ]
     },
     "Plague City": {
+        "hasReqs":false,
         "length": "short"
     },
     "Priest in Peril": {
+        "hasReqs":false,
         "length": "medium",
         "notes": "Ability to defeat a level 30 enemy without magic."
     },
     "The Queen of Thieves": {
+        "hasReqs":false,
         "length": "short",
         "requirements": {
             "thieving":20
@@ -1005,10 +1105,12 @@
         "notes": "Must have at least 20% Piscarilius House favour."
     },
     "Rag and Bone Man": {
+        "hasReqs":false,
         "length": "medium",
         "notes": "Ability to defeat a level 27 enemy."
     },
     "Rag and Bone Man II": {
+        "hasReqs":false,
         "length": "Long",
         "requirements": {
             "slayer":40,
@@ -1027,6 +1129,7 @@
         "notes": "Ability to kill several high level monsters, either The Fremennik Trials or Horror from the Deep is needed, Creature of Fenkenstrain only needs to be started."
     },
     "Ratcatchers": {
+        "hasReqs":false,
         "length": "medium-very long",
         "quests":[
             "Icthlarin's Little Helper",
@@ -1035,6 +1138,7 @@
         "notes": "Access to Keldagrim is neeeded, a Full grown Cat is a great advantage"
     },
     "Recipe for Disaster": {
+        "hasReqs":false,
         "length": "Very Long",
         "qp":175,
         "requirements": {
@@ -1105,6 +1209,7 @@
         "notes": "Several enemies to defeat, no prayer can be used on the final enemy waves."
     },
     "Recipe for Disaster/Another Cook's Quest": {
+        "hasReqs":false,
         "length": "short",
         "requirements": {
             "cooking":10
@@ -1114,6 +1219,7 @@
         ]
     },
     "Recipe for Disaster/Freeing Evil Dave": {
+        "hasReqs":false,
         "length": "medium",
         "requirements": {
             "cooking":25
@@ -1127,6 +1233,7 @@
         "notes": "Wily cat or full grown cat recommended."
     },
     "Recipe for Disaster/Freeing King Awowogei": {
+        "hasReqs":false,
         "length": "medium-long",
         "requirements": {
             "cooking":70,
@@ -1140,6 +1247,7 @@
         "notes": "43 prayer recommended, Must be able to defeat a level 84 snake."
     },
     "Recipe for Disaster/Freeing Pirate Pete": {
+        "hasReqs":false,
         "length": "medium",
         "requirements": {
             "cooking":31
@@ -1149,6 +1257,7 @@
         }
     },
     "Recipe for Disaster/Freeing Sir Amik Varze": {
+        "hasReqs":false,
         "length": "medium",
         "qp":107,
         "quests":[
@@ -1170,6 +1279,7 @@
         "notes": "Legends quest only needs to be started to access Kharazi Jungle."
     },
     "Recipe for Disaster/Freeing Skrach Uglogwee": {
+        "hasReqs":false,
         "length": "medium",
         "requirements": {
             "cooking":41,
@@ -1180,9 +1290,11 @@
         ]
     },
     "Recipe for Disaster/Freeing the Goblin generals": {
+        "hasReqs":false,
         "length": "short"
     },
     "Recipe for Disaster/Freeing the Lumbridge Guide": {
+        "hasReqs":false,
         "length": "short",
         "requirements": {
             "cooking":40
@@ -1200,12 +1312,14 @@
         ]
     },
     "Recipe for Disaster/Freeing the Mountain Dwarf": {
+        "hasReqs":false,
         "length": "short",
         "quests":[
             "Fishing Contest"
         ]
     },
     "Recruitment Drive": {
+        "hasReqs":false,
         "length": "short",
         "qp":12,
         "quests":[
@@ -1215,6 +1329,7 @@
         "notes": "You have to make yourself a female character to be able to finish this quest."
     },
     "Regicide": {
+        "hasReqs":false,
         "length": "long",
         "requirements": {
             "agility":56,
@@ -1228,6 +1343,7 @@
         "notes": "Crafting can be avoided with someone else helping you, must be able to defeat a lvl 110 enemy, safespot available."
     },
     "Roving Elves": {
+        "hasReqs":false,
         "length": "short-medium",
         "requirements": {
             "agility":56
@@ -1241,6 +1357,7 @@
         ]
     },
     "Royal Trouble": {
+        "hasReqs":false,
         "length": "medium",
         "requirements": {
             "agility":40,
@@ -1252,6 +1369,7 @@
         "notes": "Must be able to defeat a lvl 149 Sea snake."
     },
     "Rum Deal": {
+        "hasReqs":false,
         "length": "medium",
         "requirements": {
             "crafting":42,
@@ -1270,6 +1388,7 @@
         "notes": "Must be able to defeat a level 150 enemy, can be safespoted, slayer cannot be boosted, however prayer can."
     },
     "Scorpion Catcher": {
+        "hasReqs":false,
         "length": "medium",
         "requirements": {
             "prayer":31
@@ -1280,12 +1399,14 @@
         "notes": "Must be able to tun past a level 172 back demon and level 64 poison spiders."
     },
     "Sea Slug": {
+        "hasReqs":false,
         "length": "short",
         "requirements": {
             "firemaking":30
         }
     },
     "Shades of Mort'ton": {
+        "hasReqs":false,
         "length": "",
         "requirements": {
             "crafting":20,
@@ -1297,6 +1418,7 @@
         ]
     },
     "Shadow of the Storm": {
+        "hasReqs":false,
         "length": "medium",
         "requirements": {
             "crafting":30
@@ -1308,9 +1430,11 @@
         "notes": "Must be able to defeat a level 100 demon"
     },
     "Sheep Herder": {
+        "hasReqs":false,
         "length": "short"
     },
     "Shilo Village": {
+        "hasReqs":false,
         "length": "long",
         "requirements": {
             "crafting":20,
@@ -1320,6 +1444,7 @@
         "notes": "Must be able to defeat 3 enemies level 90."
     },
     "The Slug Menace": {
+        "hasReqs":false,
         "length": "medium-long",
         "requirements": {
             "crafting":30,
@@ -1330,9 +1455,11 @@
         "notes": "Runecrafting, slayer and thieving non boostable."
     },
     "A Soul's Bane": {
+        "hasReqs":false,
         "length": "medium"
     },
     "Spirits of the Elid": {
+        "hasReqs":false,
         "length": "short-medium",
         "requirements": {
             "magic":33,
@@ -1343,6 +1470,7 @@
         "notes": "Must be able to defeat 3 level 75 golems."
     },
     "Swan Song": {
+        "hasReqs":false,
         "length": "medium",
         "qp":100,
         "requirements": {
@@ -1360,6 +1488,7 @@
         "notes": "Must be able to defeat a lvl 170 enemy which can use Magic, Mele and drain prayer."
     },
     "Tai Bwo Wannai Trio": {
+        "hasReqs":false,
         "length": "long",
         "requirements": {
             "agility":15,
@@ -1372,6 +1501,7 @@
         "notes": "Must be able to defeat a level 53 enemy."
     },
     "A Tail of Two Cats": {
+        "hasReqs":false,
         "length": "long",
         "quests":[
             "Icthlarin's Little Helper"
@@ -1379,6 +1509,7 @@
         "notes": "Must wait 25-35 minutes for a patch to grow."
     },
     "Tale of the Righteous": {
+        "hasReqs":false,
         "length": "medium",
         "requirements": {
             "strength":16,
@@ -1390,6 +1521,7 @@
         "notes": "Must have at least 20% Shayzien favour."
     },
     "A Taste of Hope": {
+        "hasReqs":false,
         "length": "long",
         "requirements": {
             "crafting":48,
@@ -1408,6 +1540,7 @@
         ]
     },
     "Tears of Guthix (quest)": {
+        "hasReqs":false,
         "length": "very short",
         "qp":43,
         "requirements": {
@@ -1418,6 +1551,7 @@
         "notes": "For ironmen, you need a Bullseye lantern, so be aware, you can craft your own with 49 crafting and Smithing, or there are other ways to get it."
     },
     "Temple of Ikov": {
+        "hasReqs":false,
         "length": "medium",
         "requirements": {
             "thieving":42,
@@ -1426,6 +1560,7 @@
         "notes": "Must be able to defeat a level 84 enemy with ranged."
     },
     "Throne of Miscellania": {
+        "hasReqs":false,
         "length": "medium",
         "requirements": {
             "woodcutting":45,
@@ -1439,6 +1574,7 @@
         ]
     },
     "The Tourist Trap": {
+        "hasReqs":false,
         "length": "medium",
         "requirements": {
             "fletching":10,
@@ -1447,22 +1583,26 @@
         "notes": "Must be able to defeat a level 47 enemy."
     },
     "Tower of Life": {
+        "hasReqs":false,
         "length": "medium",
         "requirements": {
             "construction":10
         }
     },
     "Tree Gnome Village": {
+        "hasReqs":false,
         "length": "short",
         "notes": "Must be able to defeat a level 112 enemy."
     },
     "Tribal Totem": {
+        "hasReqs":false,
         "length": "short",
         "requirements": {
             "thieving":21
         }
     },
     "Troll Romance": {
+        "hasReqs":false,
         "length": "Medium",
         "requirements": {
             "agility":25
@@ -1470,6 +1610,7 @@
         "notes": "Ironmen: a maple log is needed, easy ways to get it are with 45 Woodcutting or 50 Firemaking on Wintertodt Must be able to defeat a level 113 troll."
     },
     "Troll Stronghold": {
+        "hasReqs":false,
         "length": "short-medium",
         "requirements": {
             "agility":15
@@ -1477,6 +1618,7 @@
         "notes": "Must be able to defeat a level 113 enemy, can be safespoted."
     },
     "Underground Pass": {
+        "hasReqs":false,
         "length": "long",
         "requirements": {
             "ranged":25
@@ -1488,6 +1630,7 @@
         "notes": "High agility recommended(50+), 50 thieving is also helpful."
     },
     "Wanted!": {
+        "hasReqs":false,
         "length": "long",
         "qp":32,
         "quests":[
@@ -1499,6 +1642,7 @@
         "notes": "Must be able to defeat a level 33 black knight."
     },
     "Watchtower": {
+        "hasReqs":false,
         "length": "long",
         "requirements": {
             "magic":15,
@@ -1510,10 +1654,12 @@
         "notes": "Must be able to defeat a level 68 ogre."
     },
     "Waterfall Quest": {
+        "hasReqs":false,
         "length": "medium-long",
         "quests":[]
     },
     "What Lies Below": {
+        "hasReqs":false,
         "length": "medium(short with teleports)",
         "requirements": {
             "runecrafting":35
@@ -1522,11 +1668,13 @@
         "notes": "Level 42 mining is required if you don't want to take a route by the Abyss, Must be able to defeat a level 47 enemy."
     },
     "Witch's House": {
+        "hasReqs":false,
         "length": "short",
         "quests":[],
         "notes": "Must be able to defeat 4 enemies from level 19 to 53 with no break."
     },
     "Zogre Flesh Eaters": {
+        "hasReqs":false,
         "length": "medium",
         "requirements": {
             "smithing":4,
