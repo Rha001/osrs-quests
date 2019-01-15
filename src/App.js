@@ -13,8 +13,7 @@ import { hiscores } from 'osrs-api';
 import questList from './assets/quests.json';
 import constants from './assets/constants';
 
-// TODO: Create a component to show quest lists and share the possible ones as a prop, also integrate the algorythm
-// in this component and check performance, backend will be gone for now.
+// TODO: Modify quest list to be an array and implement ironman on the algorythm.
 
 class App extends Component {
   constructor() {
