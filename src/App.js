@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import './App.css';
 
 // components
 import PlayerBar from './components/playerBar/PlayerBar';
@@ -24,6 +24,11 @@ class App extends Component {
       showQuests: false,
       errors: ''
     };
+  }
+
+  getQuestDetails = (e) => {
+    const questId = e.target.dataset.id;
+    console.log('Quest: ', questList[questId]);
   }
 
   playerHasRequirements = (requirements, playerStats) => {
@@ -58,6 +63,9 @@ class App extends Component {
               }
           }
       }
+
+      // We sort quests by their status.
+      questList.sort((a, b) => b.hasReqs - a.hasReqs );
 
       this.setState({possibleQuests: possibleQuests, showQuests: true, errors: ''});
     }).catch((e) => {
@@ -101,7 +109,7 @@ class App extends Component {
             <div className="alert alert-danger custom-margin" role="alert">{this.state.errors}</div>
           }
           { this.state.showQuests && 
-            <QuestList questList={questList} possibleQuests={this.state.possibleQuests}/>
+            <QuestList questList={questList} possibleQuests={this.state.possibleQuests} questDetailsHandler={this.getQuestDetails}/>
           }
         </div>
       </div>
