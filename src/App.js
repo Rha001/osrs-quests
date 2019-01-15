@@ -5,6 +5,7 @@ import './App.css';
 // components
 import PlayerBar from './components/playerBar/PlayerBar';
 import QuestList from './components/questList/QuestList';
+import QuestDetails from './components/questDetails/QuestDetails';
 
 // libraries
 import { hiscores } from 'osrs-api';
@@ -22,13 +23,15 @@ class App extends Component {
     this.state = {
       possibleQuests: [],
       showQuests: false,
+      showQuestDetails: false,
+      questToShow: {},
       errors: ''
     };
   }
 
   getQuestDetails = (e) => {
     const questId = e.target.dataset.id;
-    console.log('Quest: ', questList[questId]);
+    this.setState({questToShow: questList[questId], showQuestDetails: true});
   }
 
   playerHasRequirements = (requirements, playerStats) => {
@@ -107,6 +110,9 @@ class App extends Component {
           <PlayerBar playerTypes={constants.playerTypes}  calculateQuests={this.getPlayerInfo}/>
           { this.state.errors.length > 0 &&
             <div className="alert alert-danger custom-margin" role="alert">{this.state.errors}</div>
+          }
+          { this.state.showQuestDetails && 
+            <QuestDetails quest={this.state.questToShow}/>
           }
           { this.state.showQuests && 
             <QuestList questList={questList} possibleQuests={this.state.possibleQuests} questDetailsHandler={this.getQuestDetails}/>
