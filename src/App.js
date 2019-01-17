@@ -1,144 +1,40 @@
 import React, { Component } from 'react';
+import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+
+// styles
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 
 // components
-import PlayerBar from './components/playerBar/PlayerBar';
-import QuestList from './components/questList/QuestList';
-import QuestDetails from './components/questDetails/QuestDetails';
-
-// libraries
-import { hiscores } from 'osrs-api';
-
-// assets
-import questList from './assets/quests.json';
-import constants from './assets/constants';
-
-// TODO: Check Performance, do some tests, implement router for future diaries section and create about page.
+import Quests from "./components/quests/Quests";
 
 class App extends Component {
-  constructor() {
-    super();
-    
-    this.state = {
-      possibleQuests: [],
-      showQuests: false,
-      showQuestDetails: false,
-      questToShow: {},
-      errors: ''
-    };
-  }
-
-  getQuestDetails = (e) => {
-    const questId = e.target.dataset.id;
-    this.setState({questToShow: questList[questId], showQuestDetails: true});
-  }
-
-  playerHasRequirements = (requirements, playerStats, ironmanRequirements) => {
-    for(const req in requirements) {
-      if(requirements[req] > parseInt(playerStats[req].level)) {
-        return false;
-      }
-    }
-    if(ironmanRequirements) { console.log('Ironman', ironmanRequirements);
-      for(const req in ironmanRequirements) {
-        if(ironmanRequirements[req] > parseInt(playerStats[req].level)) {
-          return false;
-        }
-      }
-    }
-
-    return true;
-  }
-
-  getPlayerInfo = (playerName, playerType) => {
-    let possibleQuests = [], notPossibleQuests = [];
-
-    hiscores.getPlayer({
-      name: playerName,
-      type: 'normal'
-    }).then((playerStats) => {
-      for(const quest in questList) {
-        const questReqs = questList[quest].requirements || false;
-
-        if(!questReqs) {
-          possibleQuests.push(quest);
-          questList[quest].hasReqs = true;
-        } else if(playerType === constants.playerTypes.ironman) {
-          const ironmanRequirements = questList[quest].ironman ? questList[quest].ironman : null;
-
-          if(this.playerHasRequirements(questReqs, playerStats, ironmanRequirements)) {
-            possibleQuests.push(quest);
-            questList[quest].hasReqs = true;
-          } else {
-            notPossibleQuests.push(quest);
-          }
-        } else {
-          if(this.playerHasRequirements(questReqs, playerStats)) {
-            possibleQuests.push(quest);
-            questList[quest].hasReqs = true;
-          } else {
-            notPossibleQuests.push(quest);
-          }
-        }
-      }
-
-      // We sort quests by their status.
-      questList.sort((a, b) => b.hasReqs - a.hasReqs );
-
-      this.setState({possibleQuests: possibleQuests, showQuests: true, errors: ''});
-    }).catch((e) => {
-      if(e.response) {
-        if(e.response.status === 404) {
-          this.setState({errors: 'Player Not found.'});
-        } else {
-          this.setState({errors: 'Service Error.'});
-        }
-      } else {
-        this.setState({errors: 'Unexpected error.'});
-      }
-    });
-  }
-
   render = () => {
     return (
-      <div>
-        <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
-          <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span className="navbar-toggler-icon"></span>
-          </button>
-          <div className="collapse navbar-collapse" id="navbarNav">
-            <ul className="navbar-nav">
-              <li className="nav-item active">
-                <a className="nav-link" href="#">Quests</a>
-              </li>
-              <li className="nav-item disabled">
-                <a className="nav-link" href="#">Diaries</a>
-              </li>
-              <li className="nav-item disabled">
-                <a className="nav-link" href="#">About</a>
-              </li>
-            </ul>
-          </div>
-        </nav>
-        <div className="container">
-          <h3>Osrs Quest Calculator</h3>
-          <PlayerBar playerTypes={constants.playerTypes}  calculateQuests={this.getPlayerInfo}/>
-          { this.state.errors.length > 0 &&
-            <div className="alert alert-danger custom-margin" role="alert">{this.state.errors}</div>
-          }
-          <div className="row custom-margin">
-            <div className="col-sm quests-list">
-              { this.state.showQuests && 
-                <QuestList questList={questList} possibleQuests={this.state.possibleQuests} questDetailsHandler={this.getQuestDetails}/>
-              }
+      <Router>
+        <div>
+          <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
+            <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+              <span className="navbar-toggler-icon"></span>
+            </button>
+            <div className="collapse navbar-collapse" id="navbarNav">
+              <ul className="navbar-nav">
+                <li className="nav-item">
+                  <Link className="nav-link" to="/quests">Quests</Link>
+                </li>
+                <li className="nav-item">
+                  <Link className="nav-link" to="/about">About</Link>
+                </li>
+              </ul>
             </div>
-            { this.state.showQuestDetails && 
-              <div className="col-sm"><QuestDetails quest={this.state.questToShow}/></div>
-            }
-          </div>
+          </nav>
+          <Route exact path="/" component={Quests} />
+          <Route exact path="/quests" component={Quests} />
+          <footer className="footer">
+            <div className="container">Developed by @someone.</div>
+          </footer>
         </div>
-      </div>
+      </Router>
     );
   }
 }
