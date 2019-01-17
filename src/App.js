@@ -14,7 +14,7 @@ import { hiscores } from 'osrs-api';
 import questList from './assets/quests.json';
 import constants from './assets/constants';
 
-// TODO: Modify quest list to be an array and implement ironman on the algorythm.
+// TODO: Check Performance, do some tests, implement router for future diaries section and create about page.
 
 class App extends Component {
   constructor() {
@@ -34,10 +34,17 @@ class App extends Component {
     this.setState({questToShow: questList[questId], showQuestDetails: true});
   }
 
-  playerHasRequirements = (requirements, playerStats) => {
+  playerHasRequirements = (requirements, playerStats, ironmanRequirements) => {
     for(const req in requirements) {
       if(requirements[req] > parseInt(playerStats[req].level)) {
+        return false;
+      }
+    }
+    if(ironmanRequirements) { console.log('Ironman', ironmanRequirements);
+      for(const req in ironmanRequirements) {
+        if(ironmanRequirements[req] > parseInt(playerStats[req].level)) {
           return false;
+        }
       }
     }
 
@@ -52,19 +59,28 @@ class App extends Component {
       type: 'normal'
     }).then((playerStats) => {
       for(const quest in questList) {
-          const questReqs = questList[quest].requirements || false;
-  
-          if(!questReqs) {
-              possibleQuests.push(quest);
-              questList[quest].hasReqs = true;
+        const questReqs = questList[quest].requirements || false;
+
+        if(!questReqs) {
+          possibleQuests.push(quest);
+          questList[quest].hasReqs = true;
+        } else if(playerType === constants.playerTypes.ironman) {
+          const ironmanRequirements = questList[quest].ironman ? questList[quest].ironman : null;
+
+          if(this.playerHasRequirements(questReqs, playerStats, ironmanRequirements)) {
+            possibleQuests.push(quest);
+            questList[quest].hasReqs = true;
           } else {
-              if(this.playerHasRequirements(questReqs, playerStats)) {
-                  possibleQuests.push(quest);
-                  questList[quest].hasReqs = true;
-              } else {
-                  notPossibleQuests.push(quest);
-              }
+            notPossibleQuests.push(quest);
           }
+        } else {
+          if(this.playerHasRequirements(questReqs, playerStats)) {
+            possibleQuests.push(quest);
+            questList[quest].hasReqs = true;
+          } else {
+            notPossibleQuests.push(quest);
+          }
+        }
       }
 
       // We sort quests by their status.
@@ -111,12 +127,16 @@ class App extends Component {
           { this.state.errors.length > 0 &&
             <div className="alert alert-danger custom-margin" role="alert">{this.state.errors}</div>
           }
-          { this.state.showQuestDetails && 
-            <QuestDetails quest={this.state.questToShow}/>
-          }
-          { this.state.showQuests && 
-            <QuestList questList={questList} possibleQuests={this.state.possibleQuests} questDetailsHandler={this.getQuestDetails}/>
-          }
+          <div className="row custom-margin">
+            <div className="col-sm quests-list">
+              { this.state.showQuests && 
+                <QuestList questList={questList} possibleQuests={this.state.possibleQuests} questDetailsHandler={this.getQuestDetails}/>
+              }
+            </div>
+            { this.state.showQuestDetails && 
+              <div className="col-sm"><QuestDetails quest={this.state.questToShow}/></div>
+            }
+          </div>
         </div>
       </div>
     );

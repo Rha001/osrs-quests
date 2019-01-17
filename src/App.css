@@ -9,3 +9,12 @@
 .custom-margin {
   margin: 40px 0;
 }
+
+.no-margin {
+  margin: 0;
+}
+
+.quests-list {
+  max-height: 600px;
+  overflow-y: scroll;
+}
