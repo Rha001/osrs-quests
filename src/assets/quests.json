@@ -572,6 +572,15 @@
     ]
   },
   {
+    "name": "The Forsaken Tower",
+    "hasReqs": false,
+    "length": "Medium",
+    "quests": [
+      "Client of Kourend"
+    ],
+    "notes": "20% Lovakengj favour required."
+  },
+  {
     "name": "The Fremennik Isles",
     "hasReqs": false,
     "length": "long",

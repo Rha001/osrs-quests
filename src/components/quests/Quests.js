@@ -12,8 +12,6 @@ import { hiscores } from 'osrs-api';
 import questList from '../../assets/quests.json';
 import constants from '../../assets/constants';
 
-// TODO: Check Performance, do some tests, implement router for future diaries section and create about page.
-
 class Quests extends Component {
   constructor() {
     super();
@@ -38,7 +36,7 @@ class Quests extends Component {
         return false;
       }
     }
-    if(ironmanRequirements) { console.log('Ironman', ironmanRequirements);
+    if(ironmanRequirements) {
       for(const req in ironmanRequirements) {
         if(ironmanRequirements[req] > parseInt(playerStats[req].level)) {
           return false;
@@ -101,7 +99,7 @@ class Quests extends Component {
   render = () => {
     return (
       <div className="container">
-        <h3>Osrs Quest Calculator</h3>
+        <h3 className="center-text">Osrs Quest Calculator</h3>
         <PlayerBar playerTypes={constants.playerTypes}  calculateQuests={this.getPlayerInfo}/>
         { this.state.errors.length > 0 &&
         <div className="alert alert-danger custom-margin" role="alert">{this.state.errors}</div>

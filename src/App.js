@@ -8,6 +8,8 @@ import './App.css';
 // components
 import Quests from "./components/quests/Quests";
 
+// TODO: Do some tests, improve quest details.
+
 class App extends Component {
   render = () => {
     return (
@@ -31,7 +33,7 @@ class App extends Component {
           <Route exact path="/" component={Quests} />
           <Route exact path="/quests" component={Quests} />
           <footer className="footer">
-            <div className="container">Developed by @someone.</div>
+            <div className="container">Developed by @dev_romeroangel.</div>
           </footer>
         </div>
       </Router>
