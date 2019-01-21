@@ -16,7 +16,12 @@
 
 .quests-list {
   max-height: 600px;
-  overflow-y: scroll;
+  overflow-y: auto;
+}
+
+.quests-reqs {
+  max-height: 550px;
+  overflow-y: auto;
 }
 
 .footer {

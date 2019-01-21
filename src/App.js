@@ -33,7 +33,7 @@ class App extends Component {
           <Route exact path="/" component={Quests} />
           <Route exact path="/quests" component={Quests} />
           <footer className="footer">
-            <div className="container">Developed by @dev_romeroangel.</div>
+            <div className="container">Developed by @Dromeroangel.</div>
           </footer>
         </div>
       </Router>
