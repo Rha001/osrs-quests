@@ -6,7 +6,7 @@ import QuestList from './questList/QuestList';
 import QuestDetails from './questDetails/QuestDetails';
 
 // libraries
-import { hiscores } from 'osrs-api';
+import axios from 'axios';
 
 // assets
 import questList from '../../assets/quests.json';
@@ -50,10 +50,9 @@ class Quests extends Component {
   getPlayerInfo = (playerName, playerType) => {
     let possibleQuests = [], notPossibleQuests = [];
 
-    hiscores.getPlayer({
-      name: playerName,
-      type: 'normal'
-    }).then((playerStats) => {
+    axios.get('scores/hiscores.php?player='+ playerName).then((response) => {
+      const playerStats = response.data;
+
       for(const quest in questList) {
         const questReqs = questList[quest].requirements || false;
 
