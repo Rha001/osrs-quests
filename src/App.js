@@ -7,6 +7,7 @@ import './App.css';
 
 // components
 import Quests from "./components/quests/Quests";
+import About from './components/about/About';
 
 // TODO: Do some tests, improve quest details.
 
@@ -32,9 +33,8 @@ class App extends Component {
           </nav>
           <Route exact path="/" component={Quests} />
           <Route exact path="/quests" component={Quests} />
-          <footer className="footer">
-            <div className="container">Developed by @Dromeroangel.</div>
-          </footer>
+          <Route exact path="/about" component={About} />
+          
         </div>
       </Router>
     );

@@ -48,9 +48,10 @@ class Quests extends Component {
   }
 
   getPlayerInfo = (playerName, playerType) => {
+    const HISCORES_API= 'scores/hiscores.php?player=';
     let possibleQuests = [], notPossibleQuests = [];
 
-    axios.get('scores/hiscores.php?player='+ playerName).then((response) => {
+    axios.get(HISCORES_API + playerName).then((response) => {
       const playerStats = response.data;
 
       for(const quest in questList) {
@@ -97,8 +98,8 @@ class Quests extends Component {
 
   render = () => {
     return (
-      <div className="container">
-        <h3 className="center-text">Osrs Quest Calculator</h3>
+      <div className="container fit-content">
+        <h3 className="center-text padding-10">Osrs Quest Calculator</h3>
         <PlayerBar playerTypes={constants.playerTypes}  calculateQuests={this.getPlayerInfo}/>
         { this.state.errors.length > 0 &&
         <div className="alert alert-danger custom-margin" role="alert">{this.state.errors}</div>

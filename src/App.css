@@ -36,3 +36,22 @@
 .center-text {
   text-align: center;
 }
+
+.padding-10 {
+  padding: 10px 0;
+}
+
+.fit-content {
+  display: block;
+  overflow: auto;
+}
+
+.developed-by {
+  padding: 50px 0 30px;
+  font-size: 1.4em;
+}
+
+.copyright {
+  font-size: 1.3em;
+  padding: 40px;
+}
