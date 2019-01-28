@@ -50,6 +50,7 @@ class Quests extends Component {
   getPlayerInfo = (playerName, playerType) => {
     const HISCORES_API= 'scores/hiscores.php?player=';
     let possibleQuests = [], notPossibleQuests = [];
+    this.setState({possibleQuests: [], showQuests: false, showQuestDetails: false, questToShow: {}, errors: ''});
 
     axios.get(HISCORES_API + playerName).then((response) => {
       const playerStats = response.data;
